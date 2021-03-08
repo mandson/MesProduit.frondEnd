@@ -7,12 +7,16 @@ import { ProduitsComponent } from './produits/produits.component';
 import { AddProduitComponent } from './add-produit/add-produit.component';
 import { FormsModule } from '@angular/forms';
 import { UpdateProduitComponent } from './update-produit/update-produit.component';
+import { LoginComponent } from './login/login.component';
+import { ForbiddenComponent } from './forbidden/forbidden.component';
 @NgModule({
   declarations: [
     AppComponent,
     ProduitsComponent,
     AddProduitComponent,
     UpdateProduitComponent,
+    LoginComponent,
+    ForbiddenComponent,
 
   ],
   imports: [
