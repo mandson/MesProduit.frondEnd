@@ -1,3 +1,6 @@
+import { ProduitGuard } from './produit.guard';
+import { ForbiddenComponent } from './forbidden/forbidden.component';
+import { LoginComponent } from './login/login.component';
 import { UpdateProduitComponent } from './update-produit/update-produit.component';
 import { AddProduitComponent } from './add-produit/add-produit.component';
 import { ProduitsComponent } from './produits/produits.component';
@@ -7,9 +10,11 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
 //Ici on etablie les routes pour la navigation a travers nos different componnent
 {path:"produits",component: ProduitsComponent },
-{path:"add-produit",component:AddProduitComponent },
+{path:"add-produit",component:AddProduitComponent ,canActivate:[ProduitGuard]},
 {path:"add-produit",component:AddProduitComponent },
 {path: "updateProduit/:id", component: UpdateProduitComponent},
+{path:"login",component:LoginComponent },
+{path: 'forbidden', component: ForbiddenComponent},
 {path:"", redirectTo:"produits",pathMatch:"full" },
 
 
